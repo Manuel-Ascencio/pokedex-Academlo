@@ -6,14 +6,14 @@ export const Pokemon = styled.div`
   min-height: 100vh;
   color: #f6f6f6;
   padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Container = styled.div`
   height: 100%;
-  display: flex;
   width: 100%;
-  justify-content: center;
-  align-items: center;
 
   @media only screen and (min-width: 700px) {
     max-width: 1200px;
