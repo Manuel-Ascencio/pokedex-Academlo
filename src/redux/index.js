@@ -1,18 +1,23 @@
 const INITIAL_STATE = {
-    name: "",
-}
+  userName: "",
+  isLoading: false,
+};
 
-const reducer = ( state = INITIAL_STATE, action ) => {
-    switch (action.type) {
-        case "GET_NAME":
-            return {
-                ...state,
-                name: action.payload
-            }
-        default:
-            return state;
-    }
-    
-}
+const reducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case "GET_NAME":
+      return {
+        ...state,
+        userName: action.payload,
+      };
+    case "IS_LOADING":
+      return {
+        ...state,
+        isLoading: !state.isLoading,
+      };
+    default:
+      return state;
+  }
+};
 
 export default reducer;
